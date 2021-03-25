@@ -1547,6 +1547,7 @@ final class RegionClient extends ReplayingDecoder<VoidEnum> {
       final class RetryTimer implements TimerTask {
         public void run(final Timeout timeout) {
           if (isAlive()) {
+            rpc.attempt++; // proposed fix from https://github.com/OpenTSDB/asynchbase/issues/198
             sendRpc(rpc);
           } else {
             if (rpc instanceof MultiAction) {
