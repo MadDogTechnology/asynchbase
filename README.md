@@ -1,3 +1,10 @@
+
+# Build and usage instruction
+
+See TBone/docs/missing-scanner
+
+
+
 # Asynchronous HBase
 
 This is an alternative Java library to use HBase in applications that require
